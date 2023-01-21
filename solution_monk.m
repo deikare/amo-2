@@ -16,15 +16,10 @@ end
 
 lambdaV = [10, 5, 1, 0.1, 0.05, 0.01, 0.005, 0.001, 1e-8];
 
-disp("----------------Primal----------------")
-for lambda = lambdaV
-    [correctCount, wrongCount, wSolution, bSolution, ySolution] = primalProblem(x, y, lambda);
-    dispSolution(correctCount, wrongCount, wSolution, bSolution, lambda);
-end
+performSVM(x, y, lambdaV);
 
-
-disp("----------------Dual----------------")
-for lambda = lambdaV
-    [correctCount, wrongCount, wSolution, bSolution, ySolution] = dualProblem(x, y, lambda);
-    dispSolution(correctCount, wrongCount, wSolution, bSolution, lambda);
-end
+%wnioski do sprawka 
+% działają prawie identycznie
+% w drugim przypadku dużo gorzej, bo dane nie są tak ładnie liniowo
+% separowalne przez hiperpłaszczyznę
+% można zastosować wtedy np kernel trick
