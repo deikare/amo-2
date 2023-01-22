@@ -19,7 +19,7 @@ xMinus = produceSet(nEachSide, dimmensions, -1, randStream, w, b);
 x = [xPlus, xMinus];
 y = [ones(1, nEachSide), -1 * ones(1, nEachSide)];
 
-lambdaV = [1, 0.1, 0.05, 0.01, 0.005, 0.001];
+lambdaV = [1, 0.1, 0.01, 0.001];
 
 performSVM(x, y, lambdaV);
 

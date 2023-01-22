@@ -29,6 +29,6 @@ function [correctCount, wrongCount, wSolution, bSolution, ySolution] = dualProbl
     wrongCount = sum((ySolution - y) ~= 0);
     correctCount = n - wrongCount;
 
-    wSolution = wSolution / norm(wSolution);
     bSolution = bSolution / norm(wSolution);
+    wSolution = wSolution / norm(wSolution);
 end

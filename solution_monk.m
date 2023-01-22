@@ -14,7 +14,8 @@ for i = 1:length(y)
     end
 end
 
-lambdaV = [10, 5, 1, 0.1, 0.05, 0.01, 0.005, 0.001, 1e-8];
+% lambdaV = [10, 5, 1, 0.1, 0.05, 0.01, 0.005, 0.001, 1e-8];
+lambdaV = [1, 0.1, 0.01, 0.001];
 
 performSVM(x, y, lambdaV);
 

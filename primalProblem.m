@@ -1,6 +1,4 @@
 function [correctCount, wrongCount, wSolution, bSolution, ySolution] = primalProblem(x, y, lambda)
-%     n = length(y);
-
     [dimmensions, n] = size(x);
 
     w = optimvar('w', dimmensions);
@@ -24,6 +22,6 @@ function [correctCount, wrongCount, wSolution, bSolution, ySolution] = primalPro
     wrongCount = sum((ySolution - y) ~= 0);
     correctCount = n - wrongCount;
 
-    wSolution = wSolution / norm(wSolution);
     bSolution = bSolution / norm(wSolution);
+    wSolution = wSolution / norm(wSolution);
 end
